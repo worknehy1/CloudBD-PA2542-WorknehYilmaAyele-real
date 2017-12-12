@@ -1,0 +1,235 @@
+Cloud and Big Data Business Case
+By - Workneh Yilma Ayele
+
+Acronym
+NIST - (National Institute of Standards and Technology) USA 
+IaaS – Infrastructure as a Service
+PaaS – Platform as a Service
+SaaS – Software as a Service
+SLA – Service Level Agreements
+CAPEX – Capital Expenses
+OPEX – Operational Expenses
+Table of Contents
+Cloud computing	2
+Definition by Rosenberg and Mateos	2
+Definition by NIST (Mell and Grance)	2
+Reasons for “Going to the Cloud”	5
+Scalable Software Architectures	7
+Filesystems	8
+Databases	8
+Security in the Cloud	9
+Security benefits of cloud computing.	9
+Security liabilities of cloud computing	9
+
+
+ 
+Introduction
+This document has six  sections, in the first section the definition of cloud computing and the basic principles of cloud computing according to Rosenberg and Mateos are presented. The second section follows by presenting reasons for going to the cloud, and then scalable software architectures, file system, databases, and security in the cloud are presented.
+
+1.	Cloud computing - What is cloud computing?
+
+Definition by Rosenberg and Mateos
+
+Rosenberg and Mateos argues that the five principles of cloud computing presented in their book define cloud computing. These principles are pooled resources, virtualization, elasticity, automation, and metered billing. Therefore, they argue that there is a consensus that is gaining a growing acceptance among cloud vendors, analysts, and users to consider cloud computing as a computing service provided by third party and is available when needed with dynamic scaling capability in response to fluctuating demands.  Also, Rosenberg and Mateos presented classifying layers of cloud computing such as IaaS, PaaS, SaaS, and private clouds as precursors of public clouds (Rosenberg and Mateos 2011).
+
+Definition by NIST (Mell and Grance)
+
+ “Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction. This cloud model is composed of five essential characteristics, three service models, and four deployment models.” (Mell and Grance, 2011)
+There are many definitions of cloud computing in literature. However, the definition of cloud computing by NIST serves as a reference among the numerous definitions for Cloud Computing as well as a starting point for the discourse of what cloud is and how to best use it. Additionally, the NIST definition is also meant to serve as a reference for comprehensive comparisons of deployment strategies and hosted services (Kulkarni and Agrawal 2014). 
+I present below the comparison of the two definitions of cloud computing. The comparison indicated that the definition by Rosenberg and Matos covers most of the key concepts of cloud computing but seems to overlook cloud deployment models. The definition by NIST covers different viewpoints of cloud computing. See below Table 1, for the comparison of the key concepts of cloud computing.
+
+
+NIST	Rosenberg and Mateos
+Essential characteristics of cloud computing
+-	On-demand self service
+-	Broad network access
+-	Resource pooling
+-	Rapid elasticity and scaling
+-	Measured service	The five principles of cloud computing
+-	Pooled Computing Resources 
+-	Virtualized Computing Resources 
+-	Elastic Scaling up or down 
+-	Automatic creation and deletion of new VM’s 
+-	Resource usage billed only as used 
+Cloud service models
+-	SaaS
+-	PaaS
+-	IaaS	classifying layers of cloud computing
+-	SaaS
+-	IaaS
+-	PaaS, and private clouds as predecessors 
+of public clouds
+Cloud deployment models
+-	Public clouds
+-	Private clouds
+-	Community clouds
+-	Hybrid clouds	private clouds as precursors of public clouds
+
+Rosenberg discuss five principles of cloud computing, i.e.: 
+•	Pooled Computing Resources 
+•	Virtualised Computing Resources 
+•	Elastic Scaling up or down 
+•	Automatic creation and deletion of new VM’s 
+•	Resource usage billed only as used 
+
+ 
+
+
+2.	Reasons for “Going to the Cloud”
+
+Adopting a cloud solution is often touted for economic reasons – the metered billing aspect is particularly attractive for many companies[2.
+From a technical perspective, the reasons are more geared towards quality attributes. ISO/IEC 25010:2011 (the successor of ISO 9126) lists the following quality attributes:
+ 
+•	Functional Suitability
+o	Functional Completeness
+o	Functional Correctness
+o	Functional Appropriateness
+•	Performance Efficiency
+o	Time-Behaviour
+o	Resource Utilisation
+o	Capacity
+•	Compatibility
+o	Co-existence
+o	Interoperability
+•	Usability
+o	Appropriateness
+o	Recognisability
+o	Learnability
+o	Operability
+o	User error protection
+o	User interface aesthetics
+o	Accessibilty
+•	Reliability
+o	Maturity
+o	Availability
+o	Fault tolerance
+o	Recoverability
+•	Security
+o	Confidentiality
+o	Integrity
+o	Non-repudiation
+o	Accountability
+o	Authenticity
+•	Maintainability
+o	Modularity
+o	Reusability
+o	Analysability
+o	Modifiability
+o	Testability
+•	Portability
+o	Adaptability
+o	Installability
+o	Replaceability
+ 
+1.	Which of these may be a reason for moving towards a cloud solution (Pick the top five)? Please motivate your answers.
+According to Reese SLA is an important document indicating key metrics such as availability, relativity,  and performance that are expected by customers under reasonable circumstances. Availability – how often a server is used, reliability – how well one can trust the system, and performance –is about designing for best performance such as clustering vs a single node system, segmenting databases, and forking the capabilities of your underlying platforms (Reese 2009).  Therefore, I chose reliability as the first, performance efficiency as the second since cost of running is a key aspect for choosing the cloud and security as the third. Finally, I would choose maintainability to be the fourth and usability to be the fifth reasons for moving towards a cloud solution.
+2.	Elastic Scale (and Scale in general) is one of the previously discussed key principles, but scale with respect to what?
+Elasticity is to dynamically scale resources as needed, it can mean scaling with respect to the need of capital expenses (CAPEX). 
+3.	In what way does a cloud solution address usability?
+According to Rosenberg and Mateos usability deals with how real users interact with the applications interface and functionality (Rosenberg and Mateos 2011). A cloud solution can address usability by providing operability, validation of user inputs and learnable interface with ease of accessibility and relevant service.
+4.	In what way can a cloud solution address security and all its sub-attributes?
+Integrity – can be achieved by using checksums to make sure that files are not changed in transit. Confidentiality – can be achieved by using encryption techniques as for example health related records.
+Non-repudiation – can be achieved by integrity mechanisms
+Accountability – can be achieved through auditability by the use of certification such as SAS 70 to ensure auditing capability of providers.
+Authenticity – can be achieved by providing access control mechanisms to make sure only authorized users can access resources as needed.
+3.	Scalable Software Architectures
+
+A small selection of different types of applications are described below. For each of these application types:
+1.	Reason about which the most important quality attributes might be for the type of system.
+2.	Reason about a software architecture that can be used to implement the type of system in a scalable way. What does “scalable” mean?
+o	Don’t forget to actually outline the software architecture in terms of involved software components and connectors.
+3.	Reason about how to also ensure Availability and Reliability in the type of system.
+4.	Reason about how to ensure efficient, scalable, and sufficiently reliable storage of data.
+System Type: Computing Jobs This system works on the principle that a large chunk of data is made available and a number of computing-intensive tasks should be performed on the data. These computations can be dependent on each other (First, do A, then do B), or independent. Moreover, the computations may require access to the entire dataset, or they may be able to work on smaller portions of the data.
+1.	Reason about which the most important quality attributes might be for the type of system.
+2.	Reason about a software architecture that can be used to implement the type of system in a scalable way. What does “scalable” mean?
+o	Don’t forget to actually outline the software architecture in terms of involved software components and connectors.
+3.	Reason about how to also ensure Availability and Reliability in the type of system.
+4.	Reason about how to ensure efficient, scalable, and sufficiently reliable storage of data.
+System Type: Computing Stream This system is similar to the “Computing Jobs” system, except that data arrives continuously instead of as large chunks. Obviously, this means that computations work on individual portions of the data. It may also mean that the computations are run in sequence A -> B -> C for each chunk of data. However, it may also mean that you have a large number of streams to process in parallel.
+1.	Reason about which the most important quality attributes might be for the type of system.
+2.	Reason about a software architecture that can be used to implement the type of system in a scalable way. What does “scalable” mean?
+o	Don’t forget to actually outline the software architecture in terms of involved software components and connectors.
+3.	Reason about how to also ensure Availability and Reliability in the type of system.
+4.	Reason about how to ensure efficient, scalable, and sufficiently reliable storage of data.
+
+System Type: User Silos This system is a system where end-users interact with the system to perform a task. This may be a session-based task that consists of more than several steps, and the system must appear responsive for each individual user. However, there is little interaction between different users; each user experience the system as if they were currently alone on it.
+1.	Reason about which the most important quality attributes might be for the type of system.
+2.	Reason about a software architecture that can be used to implement the type of system in a scalable way. What does “scalable” mean?
+o	Don’t forget to actually outline the software architecture in terms of involved software components and connectors.
+3.	Reason about how to also ensure Availability and Reliability in the type of system.
+4.	Reason about how to ensure efficient, scalable, and sufficiently reliable storage of data.
+
+System Type: User Silos with Post-Processing Similar to “User Silos”, but during one session a user may kick off one or several tasks involving considerable amounts of computations or data processing. The key here is that these tasks need not be interactive in nature – the results can be reported back to the users asynchronously (indeed, it may not even be the user that is the recipient of the tasks’ results).
+1.	Reason about which the most important quality attributes might be for the type of system.
+2.	Reason about a software architecture that can be used to implement the type of system in a scalable way. What does “scalable” mean?
+o	Don’t forget to actually outline the software architecture in terms of involved software components and connectors.
+3.	Reason about how to also ensure Availability and Reliability in the type of system.
+4.	Reason about how to ensure efficient, scalable, and sufficiently reliable storage of data.
+
+System Type: Networks of Users In this type of system, the user interacts with a network of other users in realtime. When one user makes some information available, it should be made available to all other users concurrently. To “make information available” may require processing by the system (for example parsing the input format and translating it to desired formats for viewing). Each individual processing task may not be very intensive, but with a large number of concurrent users the amount of required processing power adds up. In this type of system a balance need to be struck between pushing processing back to the users’ devices and processing server-side. Pushing processing back to the clients may mean larger network transfers, and increased energy consumption on the client devices (which may be mobile devices).
+1.	Reason about which the most important quality attributes might be for the type of system.
+2.	Reason about a software architecture that can be used to implement the type of system in a scalable way. What does “scalable” mean?
+o	Don’t forget to actually outline the software architecture in terms of involved software components and connectors.
+3.	Reason about how to also ensure Availability and Reliability in the type of system.
+4.	Reason about how to ensure efficient, scalable, and sufficiently reliable storage of data.
+
+4.	Filesystems
+
+Consider again the simple application in Figure 1. In this example there is a single database that serves both instances of the application. But what about other data that does not fit into a usual database, such as binary files, or even whole filesystems? For this, you essentially have three options:
+1.	A self-administered networked filesystem. This requires that one of your hosts is designated as filesystem server.
+2.	A cloud-based networked filesystem. Some cloud providers also offer online storage facilities.
+3.	A self administered distributed filesystem that is synchronised across your hosts.
+Questions:
+1.	Briefly describe the advantages and disadvantages of each of these options.
+2.	Briefly describe each of the storage solutions below and list benefits and liabilities3:
+o	Hadoop HDFS
+o	GlusterFS
+o	Amazon S3
+o	Amazon Glacier
+o	Google Cloud Storage
+3.	What are the security implications of using Amazon S3?
+5.	Databases
+
+In this Sprint it is claimed that the choice of database technology is essentially between an SQL database and a NoSQL database, and  the  NoSQL has received quite some hype in recent years.  In this section, I will present the principles of NoSQL databases, the benefits of the NoSQL over the SQL databases and finally the I present examples indicating where the NoSQL database should be implemented.
+Principles of NoSQL databases
+
+The NoSQL databases can achieve massive scale because it avoids joining operations and fixed table schemas in addition to overruling the governing SQL fundamental principles. 
+NoSQL uses a single data item, which provides eventual consistency and transaction. It is also possible to guarantee atomicity, consistency, isolation, and durability. An example of a NoSQL table can contains items such as car models, colors, car makes, and year along with the corresponding keys.
+Several NoSQL implementations on distributed architectures employ hash table with redundant data on distributed servers, which ultimately leads to scalabilty and fault-tolerance. Whereas some NoSQL advocates promote the use of key value pairs or array while others promote the utilization of XQuery standards such as XML databases. 
+Benefits of a NoSQL database over an SQL database
+
+Big data (volume) – is not easily implemented by using SQL databases (Rosenberg and Mateos 2011).
+The NoSQL breaks the basic relational database SQL principles to reach massive scale. The SQL has principle that ensures consistency of data at the expense of performance (Rosenberg and Mateos 2011).
+NoSQL is suitable for the cloud since it reaches massive scale unlike the SQL counterpart (Rosenberg and Mateos 2011).
+Examples of data where a NoSQL database is the most suitable storage alternative are: 
+1.	When companies want to build data-driven application such as the Google itself – this is because it is only possible to build economical systems through NoSQL which are scalable and reliable (Rosenberg and Mateos 2011). 
+2.	When a company wants to build as data-driven application which can provide fast access of petabytes of data, availability – such implementation is feasible through none relational solutions (Rosenberg and Mateos 2011). 
+3.	When a table or the data contains vastly different data – it is structurally possible to design such table using the key-value and item table (Rosenberg and Mateos 2011).
+
+6.	Security in the Cloud
+
+Security benefits of cloud computing.
+
+Standard security procedure is needed for companies running their data centers even if their business is not to run secured data centers. It is also possible that companies make mistakes that costs them financial loss due to security breaches (Rosenberg and Mateos 2011).
+The utilization of encrypted storage, standardized network security tools such as packet filters & fireworks, virtual local networks and so on enables overcome security concerns of users (Rosenberg and Mateos 2011). 
+It is possible to ensure auditability and hence confidentiality for providing more secure facilities. It is also possible to provide physical security such as security by obscurity and the use of certification such as SAS 70 to ensure auditing capability of providers. Even if security is the main blocking factor for using the cloud, cloud providers devoted considerable resources to build and deploy cloud infrastructures (Rosenberg and Mateos 2011).
+There are best practices tested and being implemented by cloud providers to ensure network security such as run only one server, don’t open unnecessary ports, don’t access sensitive data directly, use reverse proxy as in load balancing, and limit access to your resources by only giving access when needed (Reese 2009).
+
+Security liabilities of cloud computing
+
+Security concerns slows down cloud adoption. For example, fulfilling goals of service lever agreement is a difficult task to do and corporate fear to move to the cloud (Rosenberg and Mateos 2011).
+Physical security is up to the provider while access control is a joint responsibility of providers and users (Rosenberg and Mateos 2011).
+Users of cloud computing lose access to the physical location of data and they might even may not know where their data is stored. Also, legal and standard compliance issues are articulated mainly for non-virtual IT infrastrucures. Besides, from cloud security perspectives you will face three kinds of issues (Reese 2009), such as:
+The How issue – the standards employed governing how data is operated are designed for specific problems (Reese 2009).
+The Where issue – the EU for example has regulations governing where data can be stored (Reese 2009).
+The What issue – standards dictate what components should be present in the cloud infrastructure, this can for example be a specification regarding the necessity of antivirus software on each servers (Reese 2009).
+Vulnerabilities of virtualized technologies can attract attackers (Reese 2009).
+ 
+Reference
+
+Mell, P., & Grance, T. (2011). The NIST definition of cloud computing.
+Kulkarni, S., & Agrawal, P. (2014). Introduction. In Analysis of TCP Performance in Data Center Networks (pp. 1-15). Springer, New York, NY.
+Reese, G. (2009). Cloud application architectures: building applications and infrastructure in the cloud. " O'Reilly Media, Inc.".
+Rosenberg, J., & Mateos, A. (2010). The cloud at your service. Manning Publications Co..
+
