@@ -1,5 +1,0 @@
-https://sysadmincasts.com/episodes/42-crash-course-on-vagrant-revised
-http://krisjordan.com/essays/goodbye-server-configuration-woes-hello-puppet
-https://mediatemple.net/community/products/developer/204405534/install-nginx-on-ubuntu
-https://jamesmcfadden.co.uk/using-vagrant-and-puppet-to-build-a-php-nginx-and-mysql-environment
-https://www.vagrantup.com/docs/networking/forwarded_ports.html#auto_correct
