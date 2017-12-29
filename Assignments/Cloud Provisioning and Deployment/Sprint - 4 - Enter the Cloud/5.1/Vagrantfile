@@ -23,7 +23,7 @@ config.vm.hostname = 'vagrant-test'
     override.vm.box = 'digital_ocean'
     override.vm.box_url = "https://github.com/devopsgroup-io/vagrant-digitalocean/raw/master/box/digital_ocean.box"
 
-      provider.token = 'd9b72c5febabd262b84d976f80cd8b73b8fdfc5eca48dea10157bfe6a57f4e29'
+      provider.token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
       provider.image = 'ubuntu-14-04-x64'
       provider.region = 'nyc1'
       provider.size = '512mb'
