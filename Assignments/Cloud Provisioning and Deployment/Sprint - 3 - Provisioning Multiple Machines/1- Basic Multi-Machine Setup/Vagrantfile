@@ -85,12 +85,10 @@ Vagrant.configure("2") do |config|
 #my code was the one commented next to the following block of code
 # the following block of code is taken from I'm stuck, please help me!
    for i in 0..2
-    	tstconfig = "tst" + i.to_s
-    	#puts "tstconfig " + tstconfig
-    	config.vm.define tstconfig do |tstconfig|
-    	tstconfig.vm.box = "hashicorp/precise64"
-    	tstconfig.vm.hostname = "tst" + i.to_s
-    	#puts "hostname " + tstconfig.vm.hostname
+    	tst = "tst" + i.to_s
+    	config.vm.define tst do |tst|
+    	tst.vm.box = "hashicorp/precise64"
+    	tst.vm.hostname = "tst" + i.to_s
     end
   end  
 #config.vm.define "tst0" do |tst0|

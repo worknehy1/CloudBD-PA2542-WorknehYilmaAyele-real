@@ -1,22 +1,3 @@
-# execute apt-get update
-	#exec { 'apt-get':
-	#	command=> '/usr/bin/apt-get update && /usr/bin/sudo apt-get install -y curl git'
-	#}
-#I take this from the course blog
-#if $ipaddress_eth1==undef {
-# $myip=$ipaddress
-#} else {
-# $myip=$ipaddress_eth1
-#}
- 
-#notify{"my ip ${myip}":}
- 
-#host {$hostname:
-# ensure=>'present',
-# target=>'/vagrant/hosts',
-# ip=> $myip,
-#}
-
 node 'appserver' {
   
 	exec { 'curl':
@@ -41,25 +22,6 @@ node 'dbserver' {
 ###############
 node 'web' {
 
-	#package { 'nginx':
-		
-    	#	ensure  => 'installed'
-	#}
-	#exec { 'apt-get':
-	#	command=> '/usr/bin/apt-get update && /etc/bin/apt-get install Nginx && sudo service nginx start'
-	#}
-	#service { "nginx":
-    		#require => Exec['sudo /etc/init.d/nginx start'],
-		#require => Package["nginx"],
-    		#ensure => running,
-    		#enable => true
-	#}
-	# Symlink /var/www/app on our guest with 
-  	# host /path/to/vagrant/app on our system
-  	#file { '/var/www/app':
-    	#	ensure  => 'link',
-    	#	target  => '/vagrant/app',
-  	#}
 	# Install the nginx package. This relies on apt-get update
   	package { 'nginx':
 		require => Package["nginx"], #Exec['apt-get update']],
@@ -73,24 +35,10 @@ node 'web' {
     		require => Package['nginx'],
   	}
 }
-###########
+
 
 node 'tst0', 'tst1', 'tst2' {
-	#I take this from the course blog
-		#if $ipaddress_eth1==undef {
- 			#$myip=$ipaddress
-			#}		 else {
- 			#	$myip=$ipaddress_eth1
-			#}
- #
-			#notify{"my ip ${myip}":}
- #
-			#host {$hostname:
- 			#ensure=>'present',
- 			#target=>'/vagrant/hosts',
- 			#ip=> $myip,
-		#}
-  
+	  
   	exec { 'apt-get':
 		command=> '/usr/bin/apt-get update'
 	}
